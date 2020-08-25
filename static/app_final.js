@@ -1,7 +1,7 @@
 
 function plotMe(id){
 
-  d3.json("/js/samples.json").then((data)=> {
+  d3.json("/static/samples.json").then((data)=> {
 
     //console.log(data);
 
@@ -82,7 +82,7 @@ function plotMe(id){
 
 function personInfo(id){
 
-  d3.json("/js/samples.json").then((data)=> {
+  d3.json("/static/samples.json").then((data)=> {
 
     var person = data.metadata.filter(q => q.id.toString() === id)[0];
 
@@ -135,7 +135,7 @@ function pleaseWorkFinally() {
 
     var selector = d3.select("#selDataset");
 
-    d3.json("/js/samples.json").then((data)=> {
+    d3.json("/static/samples.json").then((data)=> {
         console.log(data)
 
         data.names.forEach(function(name) {
